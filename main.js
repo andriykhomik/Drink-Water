@@ -12,8 +12,10 @@ smallCups.forEach((cup, idx)=> {
 })
 
 function highlightCups(idx){
-    if (smallCups[idx].classList.contains('full') && !smallCups[idx + 1].classList.contains('full')){
+    if (smallCups[idx].classList.contains('full') && smallCups[idx + 1] && !smallCups[idx + 1].classList.contains('full')){
         idx--
+    } else {
+
     }
 
     smallCups.forEach((cup, idx2)=>{
@@ -47,6 +49,7 @@ function updateBigCup(){
         litters.style.visibility = 'visible';
         litters.innerText = `${0.25 * (totalCups-fullCups)}L`
     }
-
 }
+
+
 
